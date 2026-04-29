@@ -1,22 +1,7 @@
-def analisar_numeros(lista):
-    if not lista:
-        return "Lista vazia"
-
-    soma = sum(lista)
-    media = soma / len(lista)
-    maior = max(lista)
-    menor = min(lista)
-
-    return {
-        "soma": soma,
-        "media": media,
-        "maior": maior,
-        "menor": menor
-    }
+def tem_duplicados(lista):
+    return len(lista) != len(set(lista))
 
 
-
-numeros = [10, 5, 8, 20, 3]
-resultado = analisar_numeros(numeros)
-
-print(resultado)
+# Teste
+numeros = [10, 5, 8, 20, 3, 5]
+print(tem_duplicados(numeros))  # True
